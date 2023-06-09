@@ -180,6 +180,7 @@
         <module>pill-quartz</module>
         <module>pill-generator</module>
         <module>pill-common</module>
+        <module>pill-pill</module>
     </modules>
     <packaging>pom</packaging>
 

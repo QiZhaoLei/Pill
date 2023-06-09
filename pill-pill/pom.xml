@@ -16,4 +16,11 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.qzl</groupId>
+            <artifactId>pill-common</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>

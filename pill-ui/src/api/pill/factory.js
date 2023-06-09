@@ -1,44 +1,44 @@
 import request from '@/utils/request'
 
-// 查询岗位列表
-export function listPost(query) {
+// 查询生产厂家信息列表
+export function listFactory(query) {
   return request({
-    url: '/system/post/list',
+    url: '/pill/factory/list',
     method: 'get',
     params: query
   })
 }
 
-// 查询岗位详细
-export function getPost(postId) {
+// 查询生产厂家信息详细
+export function getFactory(factoryId) {
   return request({
-    url: '/system/post/' + postId,
+    url: '/pill/factory/' + factoryId,
     method: 'get'
   })
 }
 
-// 新增岗位
-export function addPost(data) {
+// 新增生产厂家信息
+export function addFactory(data) {
   return request({
-    url: '/system/post',
+    url: '/pill/factory',
     method: 'post',
     data: data
   })
 }
 
-// 修改岗位
-export function updatePost(data) {
+// 修改生产厂家信息
+export function updateFactory(data) {
   return request({
-    url: '/system/post',
+    url: '/pill/factory',
     method: 'put',
     data: data
   })
 }
 
-// 删除岗位
-export function delPost(postId) {
+// 删除生产厂家信息
+export function delFactory(factoryId) {
   return request({
-    url: '/system/post/' + postId,
+    url: '/pill/factory/' + factoryId,
     method: 'delete'
   })
 }

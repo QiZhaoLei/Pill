@@ -147,6 +147,15 @@
         <el-form-item label="关键字" prop="keyword">
           <el-input v-model="form.keyword" placeholder="请输入关键字" />
         </el-form-item>
+        <el-form-item label="状态" prop="status">
+          <el-radio-group v-model="form.status">
+            <el-radio
+              v-for="dict in dict.type.sys_normal_disable"
+              :key="dict.value"
+              :label="dict.value"
+            >{{dict.label}}</el-radio>
+          </el-radio-group>
+        </el-form-item>
         <el-form-item label="备注" prop="remark">
           <el-input v-model="form.remark" type="textarea" placeholder="请输入内容" />
         </el-form-item>
@@ -200,6 +209,19 @@ export default {
       form: {},
       // 表单校验
       rules: {
+        factoryName: [
+          { required: true, message: "厂家名称不能为空", trigger: "blur" }
+        ],
+        factoryCode: [
+          {required: true, message: '厂家编码不能为空', trigger: 'blur'}
+        ],
+        phone: [
+          {
+            pattern: /^1[3|4|5|6|7|8|9][0-9]\d{8}$/,
+            message: "请输入正确的手机号码",
+            trigger: "blur"
+          }
+        ]
       }
     };
   },

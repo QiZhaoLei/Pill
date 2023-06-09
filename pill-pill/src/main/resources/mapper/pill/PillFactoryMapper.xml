@@ -27,10 +27,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <include refid="selectPillFactoryVo"/>
         <where>  
             <if test="factoryName != null  and factoryName != ''"> and factory_name like concat('%', #{factoryName}, '%')</if>
-            <if test="factoryCode != null  and factoryCode != ''"> and factory_code = #{factoryCode}</if>
+            <if test="factoryCode != null  and factoryCode != ''"> and factory_code like concat('%', #{factory_code}, '%')</if>
             <if test="contact != null  and contact != ''"> and contact = #{contact}</if>
-            <if test="phone != null  and phone != ''"> and phone = #{phone}</if>
-            <if test="keyword != null  and keyword != ''"> and keyword = #{keyword}</if>
+            <if test="phone != null  and phone != ''"> and phone like concat('%', #{phone}, '%')</if>
+            <if test="keyword != null  and keyword != ''"> and keyword like concat('%', #{keyword}, '%')</if>
             <if test="status != null  and status != ''"> and status = #{status}</if>
         </where>
     </select>

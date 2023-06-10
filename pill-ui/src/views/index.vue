@@ -31,6 +31,14 @@
             @click="goTarget('https://www.bilibili.com/video/BV13g411Y7GS/?spm_id_from=333.337.search-card.all.click&vd_source=ba20ef7277e08a254e08c4dd944b91d1')"
           >访问视频教程</el-button
           >
+          <el-button
+            type="primary"
+            size="mini"
+            icon="el-icon-s-home"
+            plain
+            @click="goTarget('https://www.iconfont.cn/')"
+          >矢量图标来源</el-button
+          >
         </p>
       </el-col>
 
